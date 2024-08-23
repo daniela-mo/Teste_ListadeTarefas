@@ -31,17 +31,16 @@ export class AddTaskComponent {
       return;
     }
   
-    // Criação do objeto novaTarefa com os campos necessários
+    
     const novaTarefa = {
       tarefa: this.tarefa,
       descricao: this.descricao,
       concluido: this.concluido
     }
   
-    // Emite o evento para adicionar a tarefa
+    
     this.onAddTask.emit(novaTarefa);
   
-    // Limpa os campos após a submissão
     this.tarefa = '';
     this.descricao = '';
     this.concluido = false;
